@@ -108,9 +108,9 @@ class IncrementalMMH3:
             h1_as_if_done ^= ((h1_as_if_done  & 0xffffffff) >> 13)
             h1_as_if_done *= 0xc2b2ae35
             h1_as_if_done ^= ((h1_as_if_done  & 0xffffffff) >> 16)
+        print(h1_as_if_done)
 
-
-        return self.data, h1_as_if_done  # & 0xffffffff
+        return h1_as_if_done  # & 0xffffffff
 
 
 
